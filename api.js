@@ -14,6 +14,9 @@ var verify = require('./routes/verify');
 var userSettings = require('./routes/userSettingRouter');
 var messages = require('./routes/messageRouter');
 var app = express();
+
+var port = (process.env.PORT || 3000);
+
 app.use(bodyParser.json());
 app.use(passport.initialize());
 
@@ -125,10 +128,10 @@ function createSendToken(user, res) {
     });
 };
 
-mongoose.connect('mongodb://localhost/ProfileMe');
-
+//mongoose.connect('mongodb://localhost/ProfileMe3');
+mongoose.connect('mongodb://adachenski:fbd78f5321@ds141118.mlab.com:41118/profileme');
 //console.log(jwt.encode('hi','secret'));
 
-var result = app.listen(3000, function () {
-    console.log('Api listening on port: ', result.address().port);
+app.listen(port, function () {
+    console.log('Api listening on port: ', port);
 });

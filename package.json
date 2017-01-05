@@ -1,20 +1,22 @@
 {
-  "name": "profile-me-backend",
+  "name": "profile-api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api.js"
   },
   "author": "Just Nasko",
   "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
+    "cfenv": "^1.0.3",
     "crypto": "0.0.3",
     "express": "^4.14.0",
     "jwt-simple": "^0.5.0",
-    "mongoose": "^4.6.7",
+    "mongoose": "^4.7.3",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
   }
